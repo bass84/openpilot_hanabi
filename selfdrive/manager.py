@@ -164,7 +164,8 @@ managed_processes = {
   "dmonitoringmodeld": ("selfdrive/modeld", ["./dmonitoringmodeld"]),
   "modeld": ("selfdrive/modeld", ["./modeld"]),
   "dashcamd": "selfdrive.dragonpilot.dashcamd.dashcamd",
-  "shutdownd": "selfdrive.dragonpilot.shutdownd.shutdownd",
+  #"shutdownd": "selfdrive.dragonpilot.shutdownd.shutdownd",
+  "shutdownd": "selfdrive.shutdownd",
   "appd": "selfdrive.dragonpilot.appd.appd",
 }
 
