@@ -113,8 +113,8 @@ class CarInterface(CarInterfaceBase):
       # outer and inner are gains. Higher values = more steering
       #
       ret.lateralTuning.init('indi')
-      ret.lateralTuning.indi.innerLoopGain = 3.0
-      ret.lateralTuning.indi.outerLoopGain = 2.0
+      ret.lateralTuning.indi.innerLoopGain = 4.0
+      ret.lateralTuning.indi.outerLoopGain = 2.8
       ret.lateralTuning.indi.timeConstant = 1.0
       ret.lateralTuning.indi.actuatorEffectiveness = 1.5
 
@@ -211,8 +211,8 @@ class CarInterface(CarInterfaceBase):
 
     ret.cruiseState.available = self.CS.main_on
     #ret.cruiseState.enabled = self.CS.main_on if not self.CS.regen_pressed else False
-    #ret.cruiseState.enabled = self.CS.main_on
-    ret.cruiseState.enabled = self.CS.pcm_acc_status == 1
+    ret.cruiseState.enabled = self.CS.main_on
+    #ret.cruiseState.enabled = self.CS.pcm_acc_status == 1
 
     buttonEvents = []
 
