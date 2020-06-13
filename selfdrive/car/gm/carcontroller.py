@@ -145,7 +145,6 @@ class CarController():
         idx = (frame // 4) % 4
 
         car_stopping = apply_gas < 2048
-        standstill = CS.pcm_acc_status == CS.out.standstill
         at_full_stop = enabled and CS.out.standstill
         near_stop = enabled and (CS.out.vEgo < P.NEAR_STOP_BRAKE_PHASE)
         can_sends.append(gmcan.create_friction_brake_command(self.packer_ch, CanBus.CHASSIS, apply_brake, idx, near_stop, at_full_stop))
@@ -153,7 +152,7 @@ class CarController():
         at_full_stop = enabled and CS.out.standstill
 
         acc_enabled = enabled
-        if standstill and not car_stopping:
+        if CS.out.standstill and not car_stopping:
           acc_enabled = False
 
         can_sends.append(gmcan.create_gas_regen_command(self.packer_pt, CanBus.POWERTRAIN, apply_gas, idx, acc_enabled, at_full_stop))
