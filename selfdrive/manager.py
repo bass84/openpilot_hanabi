@@ -191,7 +191,7 @@ managed_processes = {
   "driverview": "selfdrive.controls.lib.driverview",
   # dp
   "dashcamd": "selfdrive.dragonpilot.dashcamd.dashcamd",
-  "shutdownd": "selfdrive.dragonpilot.shutdownd.shutdownd",
+  "shutdownd": "selfdrive.shutdownd",
   "appd": "selfdrive.dragonpilot.appd.appd",
 }
 
